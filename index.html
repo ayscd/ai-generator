@@ -9,27 +9,29 @@
 </head>
 <body>
     <header>
-        <h1>Welcome to the AI Poem Generator!</h1>
-        <h2>All the poems are generated in Portuguese (BR)</h2>
+        <h1>AI Poem Generator</h1>
+        <p>ALL THE POEMS ARE GENERATED IN PT-BR</p>
     </header>
 
     <main>
         <form>
             <input type="text" 
             placeholder="Enter the topic of the poem"
-            class="theme-input"
+            class="input-box"
             autocomplete="off"
             autofocus
             required/>
-            <input type="submit">
+            <input class="input-button" type="submit" value="Generate">
         </form>
-        <div>
+        <div class="poem" id="poem">
             Batatinha quando nasce </br>
             Espalha a rama pelo chão </br>
             Mamãezinha quando dorme </br>
             Põe a mão no coração
         </div>
     </main>
+    
+    <hr>
 
     <footer>
         This project was built by <a class="git-profile" href="https://github.com/ayscd">Ayeska</a>, is linked to <a class="git-project" href="https://github.com/ayscd/ai-generator.git">Git Hub</a> and hosted on <a class="host-link" href="https://aigenerator-ptbr.netlify.app/">Netlify</a>.
