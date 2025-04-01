@@ -1,9 +1,11 @@
 function displayPoem(poem) {
-    new Typewriter('#poem', {
+  let poemWrapper = document.querySelector("#poem");
+  poemWrapper.classList.add("poem");
+
+  new Typewriter('#poem', {
     strings: poem.data.answer,
     autoStart: true,
     delay: 45,
-    cursor: "",
     pauseFor: 1000,
   });
 }
@@ -13,8 +15,8 @@ function generatePoem(event) {
 
     let poemInput = document.querySelector("#poem-input");
     let apiKey = "do8ae0f5a33a8b61b41f1t1ed44678b4";
-    let prompt = `User instructions: Generate a poem in Portuguese (PT-BR) about the ${poemInput.value}`;
-    let context = "You are a romantic poem expert, and like to write short poems. Your mission is to generate 4 line poems, and separate each line with <br />. Make sure to follow the user instructions. Do not include a title to the poem. At the end, sign the poem with 'SheCodes AI' inside a <strong> element";
+    let prompt = `User instructions: Generate a poem in Portuguese (PT-BR) about the ${poemInput.value}. Make sure the poem is regular and has rithm. Do not include a title to the poem. At the end, sign the poem with '- AI Poem Generator' inside a <strong> element.`;
+    let context = "You are a brazillian poet and writer, and you are really ispired by Romanticism. You follow the user instructions when writing your poems. You like to write poems with 8 verses and wrap each verse with a <div></div>. You are polite.";
     let apiUrl = `https://api.shecodes.io/ai/v1/generate?prompt=${prompt}&context=${context}&key=${apiKey}`
 
     let poem = document.querySelector("#poem");
